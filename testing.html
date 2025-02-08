@@ -10,58 +10,84 @@
     
     <!-- Custom CSS to style the IDE-like appearance -->
     <style>
-        /* Set the background of the entire page to baby blue */
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #a9cce3; /* Baby blue background */
-            color: #f8f8f2; /* Light text color */
-            margin: 0;
-            padding: 20px;
-        }
+    /* Set the background of the entire page to baby blue */
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #a9cce3; /* Baby blue background */
+        color: #f8f8f2; /* Light text color */
+        margin: 0;
+        padding: 20px;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #272822; /* Dark theme background for the IDE */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
+    /* Container for content with beige background */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #272822; /* Dark theme background for the IDE */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
 
-        pre {
-            background-color: #272822; /* Dark theme background for code block */
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            border: 1px solid #444;
-            font-size: 16px;
-        }
+    /* Preformatted code block with syntax highlighting */
+    pre {
+        background-color: #272822; /* Dark theme background for code block */
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        border: 1px solid #444;
+        font-size: 16px;
+        color: #f8f8f2; /* Light text color */
+    }
 
-        code {
-            display: block;
-        }
+    /* Syntax highlighting styles */
+    code {
+        display: block;
+    }
 
-        .outline {
-            background-color: #f5f5dc; /* Medium Beige background */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            margin-top: 40px;
-        }
+    .keyword {
+        color: #66d9ef; /* Cyan for keywords */
+    }
 
-        .outline h2 {
-            color: #4e4e4e;
-            text-decoration: underline;
-        }
+    .comment {
+        color: #a6e22e; /* Green for comments */
+    }
 
-        .outline h3 {
-            color: #4e4e4e;
-            margin-top: 20px;
-        }
+    .string {
+        color: #e6db74; /* Light yellow for strings */
+    }
 
-        .outline p {
-            color: #333333;
-        }
+    .function {
+        color: #f8f8f2; /* White for functions */
+    }
+
+    .variable {
+        color: #f8f8f2; /* White for variables */
+    }
+
+    /* Outline Section */
+    .outline {
+        background-color: #f5f5dc; /* Medium Beige background */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        margin-top: 40px;
+    }
+
+    .outline h2 {
+        color: #4e4e4e;
+        text-decoration: underline;
+    }
+
+    .outline h3 {
+        color: #4e4e4e;
+        margin-top: 20px;
+    }
+
+    .outline p {
+        color: #333333;
+    }
+
     </style>
 </head>
 <body>
