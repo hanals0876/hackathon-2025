@@ -10,10 +10,11 @@
     
     <!-- Custom CSS to style the IDE-like appearance -->
     <style>
+        /* Set the background of the entire page to baby blue */
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #a9cce3;
-            color: #f0e5d8;
+            background-color: #a9cce3; /* Baby blue background */
+            color: #f8f8f2; /* Light text color */
             margin: 0;
             padding: 20px;
         }
@@ -21,14 +22,14 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #272822;
+            background-color: #272822; /* Dark theme background for the IDE */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         pre {
-            background-color: #272822; /* Dark theme background */
+            background-color: #272822; /* Dark theme background for code block */
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
@@ -63,6 +64,29 @@
             left: 0;
             color: #888;
         }
+
+        /* Style for the outline section with a medium beige background */
+        .outline {
+            background-color: #f5f5dc; /* Medium Beige background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+        }
+
+        .outline h2 {
+            color: #4e4e4e; /* Dark gray text for main header */
+            text-decoration: underline;
+        }
+
+        .outline h3 {
+            color: #4e4e4e; /* Dark gray text for subheaders */
+            margin-top: 20px;
+        }
+
+        .outline p {
+            color: #333333; /* Very dark gray text for the description */
+        }
     </style>
 </head>
 <body>
@@ -77,6 +101,21 @@
     &lt;p&gt;This is a sample paragraph.&lt;/p&gt;
 &lt;/div&gt;
         </code></pre>
+    </div>
+
+    <!-- Outline Section -->
+    <div class="outline">
+        <h2>Outline</h2>
+        <p>Below is an outline of the program, summarizing its key functions with concise comments. Each function's comment should explain its purpose, inputs, and outputs in a brief yet informative manner.</p>
+
+        <h3>Function 1: calculate_area</h3>
+        <p>This function calculates the area of a circle given its radius. The radius must be a non-negative number. It returns the area as a float. The summary comment should explain that this function performs a mathematical calculation and that the input and output are well-defined.</p>
+
+        <h3>Function 2: fetchUserData</h3>
+        <p>This function fetches user data from an API based on the provided userId. It returns a promise that resolves with the user's data in JSON format. The summary comment should briefly describe the process of making the API request and handling the response.</p>
+
+        <h3>Function 3: processData</h3>
+        <p>This function processes the given data by performing data manipulation or transformation. It takes in raw data, applies necessary changes, and outputs the processed result. The summary comment should mention what type of data transformation occurs and any key assumptions, like data format.</p>
     </div>
 
     <!-- Prism.js Library for syntax highlighting -->
