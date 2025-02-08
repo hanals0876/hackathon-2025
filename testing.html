@@ -3,31 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Comments Summary</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>IDE-like Code Display</title>
+    
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    
+    <!-- Custom CSS to style the IDE-like appearance -->
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #272822;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            background-color: #272822; /* Dark theme background */
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #444;
+            font-size: 16px;
+        }
+
+        code {
+            display: block;
+        }
+
+        /* Optional: Styling for line numbers */
+        .line-numbers {
+            counter-reset: line;
+        }
+
+        .line-numbers > code {
+            display: block;
+        }
+
+        .line-numbers span {
+            display: block;
+            padding-left: 30px;
+            text-indent: -30px;
+            position: relative;
+        }
+
+        .line-numbers span:before {
+            content: counter(line);
+            counter-increment: line;
+            position: absolute;
+            left: 0;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Code Comments Guide</h1>
-        <p>Here is a summary of how to write informative and concise comments in your code, based on best practices:</p>
+        <h1>Code Display in IDE Style</h1>
+        <p>This is an example of displaying code in a style similar to an IDE:</p>
 
-        <div id="summary" class="summary">
-            <h2>Your Commenting Outline</h2>
-            <p><strong>1. Why Comments are Important:</strong> Comments are crucial for making code understandable, allowing other developers (and your future self) to grasp the logic behind the code quickly. Well-written comments prevent confusion and errors in large projects.</p>
-            <p><strong>2. Types of Comments:</strong> There are several types of comments including inline comments for explaining specific lines, block comments for explaining larger sections, and docstrings or documentation comments that describe the functionality of modules, classes, or functions.</p>
-            <p><strong>3. How Comments Improve Readability:</strong> Comments enhance code readability by clarifying complex logic, defining the purpose of variables or functions, and making the code easier to maintain. They serve as a guide to anyone reading the code, providing explanations where necessary.</p>
-            <p><strong>4. Examples of Bad Comments:</strong> Some examples of bad comments include redundant comments (e.g., “This is a function that adds two numbers”), unclear or overly simplistic comments, and comments that repeat information already present in the code (e.g., “Increment x by 1” where the code already shows `x++`).</p>
-            <p><strong>5. How to Make Comments Concise:</strong> Keep comments short and to the point by avoiding unnecessary explanations. Only include details that are not obvious from reading the code itself. Use clear language and avoid writing paragraphs of text in comments.</p>
-
-            <button id="restartButton">Restart</button>
-        </div>
+        <!-- Preformatted code block with Prism.js syntax highlighting -->
+        <pre class="line-numbers"><code class="language-html">
+&lt;div class="example"&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is a sample paragraph.&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
     </div>
 
-    <script>
-        document.getElementById('restartButton').addEventListener('click', function() {
-            // Reload the page to reset the summary (Restart functionality)
-            location.reload();
-        });
-    </script>
+    <!-- Prism.js Library for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism.js line numbers plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 </body>
 </html>
