@@ -9,72 +9,24 @@
 <body>
     <div class="container">
         <h1>Code Comments Guide</h1>
-        <p>Answer the following questions to create a summary of how to write informative and concise comments in your code.</p>
+        <p>Here is a summary of how to write informative and concise comments in your code, based on best practices:</p>
 
-        <form id="commentForm">
-            <div class="question">
-                <label for="q1">1. Why are comments important in code?</label>
-                <textarea id="q1" name="q1" placeholder="Explain why comments matter..."></textarea>
-            </div>
-            <div class="question">
-                <label for="q2">2. What types of comments should you write?</label>
-                <textarea id="q2" name="q2" placeholder="List types of comments..."></textarea>
-            </div>
-            <div class="question">
-                <label for="q3">3. How can comments improve readability?</label>
-                <textarea id="q3" name="q3" placeholder="Explain how comments help readability..."></textarea>
-            </div>
-            <div class="question">
-                <label for="q4">4. What are examples of bad comments?</label>
-                <textarea id="q4" name="q4" placeholder="Provide examples of ineffective comments..."></textarea>
-            </div>
-            <div class="question">
-                <label for="q5">5. How to make comments concise?</label>
-                <textarea id="q5" name="q5" placeholder="Explain how to keep comments brief but useful..."></textarea>
-            </div>
-
-            <button type="submit">Generate Outline</button>
-        </form>
-
-        <div id="summary" class="summary" style="display: none;">
+        <div id="summary" class="summary">
             <h2>Your Commenting Outline</h2>
-            <p><strong>1. Why Comments are Important:</strong> <span id="summary-q1"></span></p>
-            <p><strong>2. Types of Comments:</strong> <span id="summary-q2"></span></p>
-            <p><strong>3. How Comments Improve Readability:</strong> <span id="summary-q3"></span></p>
-            <p><strong>4. Examples of Bad Comments:</strong> <span id="summary-q4"></span></p>
-            <p><strong>5. How to Make Comments Concise:</strong> <span id="summary-q5"></span></p>
+            <p><strong>1. Why Comments are Important:</strong> Comments are crucial for making code understandable, allowing other developers (and your future self) to grasp the logic behind the code quickly. Well-written comments prevent confusion and errors in large projects.</p>
+            <p><strong>2. Types of Comments:</strong> There are several types of comments including inline comments for explaining specific lines, block comments for explaining larger sections, and docstrings or documentation comments that describe the functionality of modules, classes, or functions.</p>
+            <p><strong>3. How Comments Improve Readability:</strong> Comments enhance code readability by clarifying complex logic, defining the purpose of variables or functions, and making the code easier to maintain. They serve as a guide to anyone reading the code, providing explanations where necessary.</p>
+            <p><strong>4. Examples of Bad Comments:</strong> Some examples of bad comments include redundant comments (e.g., “This is a function that adds two numbers”), unclear or overly simplistic comments, and comments that repeat information already present in the code (e.g., “Increment x by 1” where the code already shows `x++`).</p>
+            <p><strong>5. How to Make Comments Concise:</strong> Keep comments short and to the point by avoiding unnecessary explanations. Only include details that are not obvious from reading the code itself. Use clear language and avoid writing paragraphs of text in comments.</p>
+
             <button id="restartButton">Restart</button>
         </div>
     </div>
 
     <script>
-        document.getElementById('commentForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Collect the answers
-            const q1 = document.getElementById('q1').value;
-            const q2 = document.getElementById('q2').value;
-            const q3 = document.getElementById('q3').value;
-            const q4 = document.getElementById('q4').value;
-            const q5 = document.getElementById('q5').value;
-
-            // Display summary
-            document.getElementById('summary-q1').textContent = q1;
-            document.getElementById('summary-q2').textContent = q2;
-            document.getElementById('summary-q3').textContent = q3;
-            document.getElementById('summary-q4').textContent = q4;
-            document.getElementById('summary-q5').textContent = q5;
-
-            // Show summary and hide form
-            document.getElementById('summary').style.display = 'block';
-            document.getElementById('commentForm').style.display = 'none';
-        });
-
         document.getElementById('restartButton').addEventListener('click', function() {
-            // Reset the form and summary
-            document.getElementById('commentForm').reset();
-            document.getElementById('summary').style.display = 'none';
-            document.getElementById('commentForm').style.display = 'block';
+            // Reload the page to reset the summary (Restart functionality)
+            location.reload();
         });
     </script>
 </body>
