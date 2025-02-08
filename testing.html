@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary and Outline Page</title>
+    <title>Code Summary</title>
     
     <!-- Prism.js CSS for syntax highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
@@ -41,31 +41,6 @@
             display: block;
         }
 
-        /* Optional: Styling for line numbers */
-        .line-numbers {
-            counter-reset: line;
-        }
-
-        .line-numbers > code {
-            display: block;
-        }
-
-        .line-numbers span {
-            display: block;
-            padding-left: 30px;
-            text-indent: -30px;
-            position: relative;
-        }
-
-        .line-numbers span:before {
-            content: counter(line);
-            counter-increment: line;
-            position: absolute;
-            left: 0;
-            color: #888;
-        }
-
-        /* Style for the outline section with a medium beige background */
         .outline {
             background-color: #f5f5dc; /* Medium Beige background */
             padding: 20px;
@@ -75,31 +50,87 @@
         }
 
         .outline h2 {
-            color: #4e4e4e; /* Dark gray text for main header */
+            color: #4e4e4e;
             text-decoration: underline;
         }
 
         .outline h3 {
-            color: #4e4e4e; /* Dark gray text for subheaders */
+            color: #4e4e4e;
             margin-top: 20px;
         }
 
         .outline p {
-            color: #333333; /* Very dark gray text for the description */
+            color: #333333;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Code Display in IDE Style</h1>
-        <p>This is an example of displaying code in a style similar to an IDE:</p>
+        <p>This is an example of displaying Java code in a style similar to an IDE:</p>
 
         <!-- Preformatted code block with Prism.js syntax highlighting -->
-        <pre class="line-numbers"><code class="language-html">
-&lt;div class="example"&gt;
-    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-    &lt;p&gt;This is a sample paragraph.&lt;/p&gt;
-&lt;/div&gt;
+        <pre class="line-numbers"><code class="language-java">
+// Class Global: Handles data on a global scale, parent class
+public class Global {
+    public String globalData;
+
+    public Global(String data) {
+        this.globalData = data;
+    }
+
+    public void displayData() {
+        System.out.println("Global Data: " + globalData);
+    }
+}
+
+// Class Regional: Uses programs for regional data, inherits from Global
+public class Regional extends Global {
+    public String regionalData;
+
+    public Regional(String globalData, String regionalData) {
+        super(globalData);
+        this.regionalData = regionalData;
+    }
+
+    @Override
+    public void displayData() {
+        super.displayData();
+        System.out.println("Regional Data: " + regionalData);
+    }
+}
+
+// Class Local: Handles functionality of local data
+public class Local {
+    public String localData;
+
+    public Local(String data) {
+        this.localData = data;
+    }
+
+    public void displayData() {
+        System.out.println("Local Data: " + localData);
+    }
+}
+
+// Function calculate_area: Calculates the area of a circle
+public double calculate_area(double radius) {
+    if (radius < 0) {
+        throw new IllegalArgumentException("Radius cannot be negative");
+    }
+    return Math.PI * radius * radius; // Area of a circle
+}
+
+// Function fetchUserData: Fetches user data from an API (mock)
+public String fetchUserData(String userId) {
+    // Simulate fetching user data
+    return "{ 'userId': '" + userId + "', 'name': 'John Doe' }";
+}
+
+// Function processData: Processes and manipulates data
+public String processData(String data) {
+    return data.trim().toUpperCase(); // Example of processing
+}
         </code></pre>
     </div>
 
@@ -109,25 +140,25 @@
         <p>Below is an outline of the program, summarizing its key functions with concise comments. Each function's comment should explain its purpose, inputs, and outputs in a brief yet informative manner.</p>
 
         <h3>Function calculate_area</h3>
-        <p>This function calculates the area of a circle given its radius. The radius must be a non-negative number. It returns the area as a float. The summary comment should explain that this function performs a mathematical calculation and that the input and output are well-defined.</p>
+        <p>This function calculates the area of a circle given its radius. The radius must be a non-negative number. It returns the area as a double. The summary comment should explain that this function performs a mathematical calculation and that the input (radius) and output (area) are well-defined.</p>
 
         <h3>Function fetchUserData</h3>
-        <p>This function fetches user data from an API based on the provided userId. It returns a promise that resolves with the user's data in JSON format. The summary comment should briefly describe the process of making the API request and handling the response.</p>
+        <p>This function fetches user data from an API based on the provided userId. It returns a JSON string representing the user's data. The summary comment should briefly describe the process of making the API request and handling the response.</p>
 
         <h3>Function processData</h3>
-        <p>This function processes the given data by performing data manipulation or transformation. It takes in raw data, applies necessary changes, and outputs the processed result. The summary comment should mention what type of data transformation occurs and any key assumptions, like data format.</p>
+        <p>This function processes the given data by performing data manipulation or transformation. It takes in raw data, applies necessary changes (like trimming and converting to uppercase), and outputs the processed result. The summary comment should mention what type of data transformation occurs and any key assumptions, like data format.</p>
 
         <h3>Variable storedData</h3>
-        <p>This variable stores data read in from the user.</p>
+        <p>This variable stores data fetched or processed by the application, such as user input or retrieved information.</p>
 
         <h3>Class Local</h3>
-        <p>Handles functionality of local data.</p>
+        <p>Handles functionality of local data. It stores and displays local-specific information, such as user preferences or settings.</p>
 
         <h3>Class Regional</h3>
-        <p>Uses programs for regional data.</p>
+        <p>Uses programs for regional data, extends the functionality of the Global class. It manages regional-level data and displays it along with global data.</p>
 
         <h3>Class Global</h3>
-        <p>Handles data on global scale, parent class.</p>
+        <p>Handles data on a global scale. It is the parent class of the Regional class and stores global data while providing a method to display it.</p>
     </div>
 
     <!-- Prism.js Library for syntax highlighting -->
