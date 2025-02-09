@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#a9cce3">
+<head>
+    <title>Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    .option-label {
+        display: block;
+        background: #333333;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .option-label:hover {
+        background: #a9cce3;
+    }
+
+    input[type="radio"] {
+        display: none; /* Hide default radio button */
+    }
+
+    input[type="radio"]:checked + .option-label {
+        background: #f5f5dc;
+        color: #333333;
+    }
+
+    .custom-title {
+        font-size: 30px;
+        color: #a9cce3;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f5f5dcb9;
+    }
+.text-left {
+    text-align: left;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #4e4e4e;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #f5f5dc;
+    padding: 4px;
+    margin-right: 10px;
+}
+.heading2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #f5f5dc;
+    text-align: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    background-color: #4e4e4e;
+    padding: 4px;
+    margin-right: 15px;
+}
+        .paragraph {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #555;
+        }
+        .highlight {
+            background-color: yellow;
+            padding: 2px;
+        }
+        select {
+        width: 180px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #4e4e4e;
+        border-radius: 5px;
+        background-color: #a9cce3;
+        color: #4e4e4e;
+    }
+    .custom-textbox {
+        
+    background-color: #f5f5dc;
+    width: 500px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border: 2px solid #a9cce3;
+    border-radius: 5px;
+    
+    line-height: normal; 
+    padding-top: 5px;
+    }
+    .submit-btn {
+        background-color: #f5f5dc;
+        color: #4e4e4e;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 10px;
+        margin-left: 1150px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .form-container {
+        text-align: left; 
+    }
+    .submit-btn:hover {
+        background-color: #e4d1b4;
+    }
+
+</style>
+</head>
+
+<body>
+<h1 class="custom-title">Wrangle Your Thoughts</h1>
+
+
+<h1 class="heading">What portion of code would you like advice on?     
+<select>
+    <option value="default" selected disabled>-- Select an option --</option>
+    <option value="class">Class</option>
+    <option value="method">Method</option>
+    <option value="loop">Loop</option>
+    <option value="variable">Variable</option>
+</select>
+</h1>
+<h1 class="heading2">Enter your method below: <br>
+    <textarea class="custom-textbox" placeholder="Enter text here"></textarea>
+</h1>
+<h1 class="heading2">What kind of method is it?
+    <form>
+        <input type="radio" id="choice" name="method" value="Interface Method">
+        <label for="choice" class="option-label">Utility Method</label>
+    
+        <input type="radio" id="choice1" name="method1" value="Implementation Method">
+        <label for="choice1" class="option-label">Implementation Method</label>
+    
+        <input type="radio" id="choice2" name="method2" value="Constructor Method">
+        <label for="choice2" class="option-label">Constructor Method</label>
+
+        <input type="radio" id="choice3" name="method3" value="Other">
+        <label for="choice3" class="option-label">Other</label>
+    </form>
+</h1>
+<h1 class="heading2">What are the preconditions for your method, if any? <br>
+    <textarea class="custom-textbox" placeholder="Enter preconditions here"></textarea>
+</h1>
+<h1 class="heading2">What purpose does this method serve to your class or user?<br>
+    <textarea class="custom-textbox" placeholder="Enter text here"></textarea>
+</h1>
+<div class="form-container">
+    <form>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+</body>
+</html>
