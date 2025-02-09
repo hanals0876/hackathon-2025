@@ -1,0 +1,33 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #a9cce3; /* Baby blue background */
+    color: #f8f8f2; /* Light text color */
+    margin: 0px;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+h2{
+    text-align: center;
+    color: darkorange;
+}
+div{
+    margin-left: 20%;
+}
+.container{
+    height: 200px;
+    width: 900px;
+    grid-column: auto;
+}
+
+button{
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5dc;
+    color: black;
+    border-color: transparent;
+}
